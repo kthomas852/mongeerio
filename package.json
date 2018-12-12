@@ -1,27 +1,22 @@
 {
-  "name": "mongeerio",
+  "name": "mongoose_skeleton",
   "version": "1.0.0",
-  "description": "This app is an experiment of Mongoose and Cheerio",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "watch": "nodemon server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kthomas852/mongeerio.git"
-  },
-  "author": "Kyle Thomas",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kthomas852/mongeerio/issues"
-  },
-  "homepage": "https://github.com/kthomas852/mongeerio#readme",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.16.2",
+    "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.4",
+    "express": "^4.16.1",
     "express-handlebars": "^3.0.0",
-    "mongoose": "^5.3.15"
+    "mongoose": "^5.0.11",
+    "morgan": "^1.9.0"
   }
 }
