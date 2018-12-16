@@ -101,11 +101,11 @@ app.get("/delete/:id", function(req, res) {
   console.log("working on deleting: " + req.params.id);
   db.Article.deleteOne({ _id: req.params.id })
   .then(function(deleted){
-    res.json(deleted);
+    res.json(deleted)
+    .done(res.render("/"));
   }).catch(function(err){
     res.json(err)
   });
-  //res.render("/")
 });
 
 // Route for grabbing a specific Article by id, populate it with it's note

@@ -5,18 +5,18 @@ $.getJSON("/articles", function(data) {
     // Display the apropos information on the page
     let tempDiv = $('<div>').addClass('post');
     let tempBtn = $('<button>').addClass('delete').text('Delete');
-    tempDiv.append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].link + "</p>").append(tempBtn);
+    tempDiv.append("<div data-id='" + data[i]._id + "'><h2>" + data[i].title + "</h2><p data-id='" + data[i]._id + "'>" + data[i].summary + "</p><a href='" + data[i].link + "'> Link to Full Article </a><br /></div>").append(tempBtn);
     $("#articles").append(tempDiv);
   }
 });
 
 
 // Whenever someone clicks a p tag
-$(document).on("click", "p", function() {
+$(document).on("click", ".post", function() {
   // Empty the notes from the note section
   $("#notes").empty();
   // Save the id from the p tag
-  var thisId = $(this).attr("data-id");
+  var thisId = $(this).children("div").attr("data-id");
 
   // Now make an ajax call for the Article
   $.ajax({

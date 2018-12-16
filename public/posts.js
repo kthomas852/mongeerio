@@ -1,5 +1,5 @@
 $(document).on('click', '.delete', function(){
-    let postID = $(this).prev('p[data-id]').data("id");
+    let postID = $(this).prev('div[data-id]').data("id");
   $.ajax({
     method: "GET",
     url: "/delete/" + postID
